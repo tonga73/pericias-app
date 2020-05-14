@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR lFf">
 
     <q-header class="bg-dark text-white">
       <q-toolbar>
@@ -12,35 +12,20 @@
           Administrador de Expedientes
         </q-toolbar-title>
       </q-toolbar>
-      
-      <FilesMenu />
     </q-header>
 
-    <q-drawer show-if-above v-model="left" side="left" elevated>
+    <q-drawer v-model="left" side="left" elevated>
       <MainMenu />
     </q-drawer>
 
     <q-page-container class="bg-grey-3">
-      <SearchBar />
       <router-view />
     </q-page-container>
-
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
 
   </q-layout>
 </template>
 
 <script>
-import SearchBar from '../components/SearchBar'
 import MainMenu from '../components/Menues/MainMenu'
 export default {
   data () {
@@ -50,7 +35,6 @@ export default {
   },
   components: {
     MainMenu,
-    SearchBar,
   }
 }
 </script>

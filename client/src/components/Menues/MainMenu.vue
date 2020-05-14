@@ -2,16 +2,16 @@
     <q-scroll-area class="fit text-dark">
         <q-list v-for="(menuItem, index) in menuList" :key="index">
 
-        <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
-            <q-item-section avatar>
-            <q-icon :name="menuItem.icon" />
-            </q-item-section>
-            <q-item-section>
-            {{ menuItem.label }}
-            </q-item-section>
-        </q-item>
+          <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
+              <q-item-section avatar>
+              <q-icon :name="menuItem.icon" />
+              </q-item-section>
+              <q-item-section>
+              {{ menuItem.label }}
+              </q-item-section>
+          </q-item>
 
-        <q-separator v-if="menuItem.separator" />
+          <q-separator v-if="menuItem.separator" />
 
         </q-list>
     </q-scroll-area>
@@ -32,7 +32,8 @@ const menuList = [
   {
     icon: 'settings',
     label: 'Configuración',
-    separator: false
+    separator: false,
+    space: true
   },
   {
     icon: 'feedback',
